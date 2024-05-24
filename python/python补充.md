@@ -47,6 +47,25 @@ print(byte_string)  # 输出：b'hello'
 
 这些字符串字面值前缀可以帮助 Python 解释器正确地理解字符串的含义，并按照相应的规则处理它们。
 
+### 其他
+
+除了`r""` 和 `f""` 字符串格式化方法外，Python 还有一些其他用于字符串格式化的方法。其中 `%s` 是一种旧式的格式化字符串的方法，它可以在字符串中插入变量或值。
+
+下面是一个简单的示例：
+
+```python
+name = "Alice"
+age = 30
+formatted_string = "My name is %s and I am %s years old." % (name, age)
+print(formatted_string)
+```
+
+在这个例子中，`%s` 被用作占位符，用于指示字符串中应该插入的变量或值。在使用 `%` 运算符时，右侧的元组中的值按顺序插入到格式化字符串中的占位符位置。
+
+另外，Python 还支持其他一些格式化占位符，如 `%d`（整数）、`%f`（浮点数）等，用于不同类型的值。
+
+除了 `%` 格式化方法外，Python 3.6 引入了 f-string 格式化字符串的方法，它更加直观和简洁。
+
 ## 推导式
 
 在 Python 中，推导式（Comprehensions）是一种简洁且优雅的语法，用于从可迭代对象创建新的数据结构。Python 支持以下几种类型的推导式：
@@ -67,6 +86,8 @@ print(byte_string)  # 输出：b'hello'
 # 示例
 numbers = [1, 2, 3, 4, 5]
 squared_numbers = [x ** 2 for x in numbers if x % 2 == 0]
+print(squared_numbers)
+# [4,16]
 ```
 
 ### 2. 字典推导式（Dictionary Comprehensions）
